@@ -5,6 +5,7 @@ from sqlalchemy import create_engine
 from functools import wraps
 import jwt
 import datetime
+import os
 
 
 #SECURITY
@@ -32,7 +33,7 @@ from instance.config import app_config
 # initialize sql-alchemy
 db = SQLAlchemy()
 
-db_engine = create_engine('postgresql://douglas:postgres@localhost/csi_db')
+db_engine = create_engine(os.getenv('DATABASE_URL'))
 
 def create_app(config_name):
     from app.models import Cliente
@@ -45,7 +46,13 @@ def create_app(config_name):
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)
 
+    @app.route('/hello/', methods=['GET'])
+    def hello():
+        return "Hello"
 
+    @app.route('/hello2/', methods=['GET'])
+    def hello2():
+        return "APLICAÇÂO FUNCIONANDO AINDA"
 
     @app.route('/clienteslista/', methods=['GET'])
     def clienteslista():
