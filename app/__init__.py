@@ -46,14 +46,7 @@ def create_app(config_name):
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)
 
-    @app.route('/hello/', methods=['GET'])
-    def hello():
-        return "Hello"
-
-    @app.route('/hello2/', methods=['GET'])
-    def hello2():
-        return "APLICAÇÂO FUNCIONANDO AINDA"
-
+    
     @app.route('/clienteslista/', methods=['GET'])
     def clienteslista():
         # GET
