@@ -1,5 +1,5 @@
-[![Heroku](http://heroku-badge.herokuapp.com/?app=angularjs-crypto&style=flat&svg=1)]
-[![Supported Python Versions](https://img.shields.io/badge/python-2.7%2C%203.3--3.6-blue.svg)]
+![Heroku](http://heroku-badge.herokuapp.com/?app=angularjs-crypto&style=flat&svg=1)
+![Supported Python Versions](https://img.shields.io/badge/python-2.7%2C%203.3--3.6-blue.svg)
 # DESAFIO CSI BACK-END
 
 
